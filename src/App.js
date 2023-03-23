@@ -1,5 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Resume from './components/Resume';
+// import {renderTab} from './About';
 
 function App() {
   const [currentTab, setCurrentTab] = useState("about");
@@ -24,7 +31,7 @@ function App() {
             <Header currentTab={currentTab} setCurrentTab={setCurrentTab}></Header>
         </div>
         <div>
-            <main>{renderTab()}</main>
+            <main>{renderTabs()}</main>
         </div>
         <div>
             <Footer></Footer>
